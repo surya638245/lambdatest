@@ -8,12 +8,12 @@ commands:
     -pip install -r requirements.txt -t lip
 build:
 commands:
-    -echo "Zipping depployment package..."
+    -echo "Zipping deployment package..."
     -cd lip-zip -r9 ../deployment_package.zip .
     -cd ..
-    -zip -g deployment_package.zip lambda_function.py
+    -zip -g deployment_package.zip lambda.py
 post_build:
 commands:
     -echo "Updating lambda function..."
-    -echo lambda-function-code --function-name (name) --zip-file fileb://deployment_package.zip
+    -echo lambda-function-code --function-name Testgit --zip-file fileb://deployment_package.zip
     -echo "DONE!!"
