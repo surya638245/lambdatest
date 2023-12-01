@@ -6,11 +6,9 @@ phases:
     commands:
       - echo "Installing dependencies..."
       - pip install -r requirements.txt -t lib
-  build:
-    commands:
-      - zip -g deployment_package.zip lambda.py
+ 
   post_build:
     commands:
       - echo "Updating lambda Function..."
-      - aws lambda update-function-code --function-name Testgit --zip-file fileb://deployment_package.zip
+      - aws lambda update-function-code --function-name Testgit --zip-file fileb://lambda.zip
       - echo "DONE!!"
