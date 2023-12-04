@@ -6,5 +6,5 @@ phases:
   post_build:
     commands:
       - echo "Updating lambda Function..."
-      - aws lambda update-function-code --function-name Testgit --zip-file fileb://lambda.zip
+      - aws lambda update-function-code --function-name gittest --zip-file fileb://lambda.zip
       - echo "DONE!!"
