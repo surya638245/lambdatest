@@ -7,5 +7,5 @@ phases:
     commands:
       - echo "Updating lambda Function..."
       - aws lambda update-function-code --function-name gittest --zip-file fileb://lambda.zip
-      - aws lambda update-function-code --function-name suryapoc2 --zip-file fileb://lambda.zip
+      - aws lambda update-function-code --function-name suryapoc2 --zip-file fileb://secondlambda.zip
       - echo "DONE!!"
